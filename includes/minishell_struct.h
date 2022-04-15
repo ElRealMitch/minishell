@@ -6,7 +6,7 @@
 /*   By: jcervoni <jcervoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 14:10:20 by jcervoni          #+#    #+#             */
-/*   Updated: 2022/04/12 16:44:00 by jcervoni         ###   ########.fr       */
+/*   Updated: 2022/04/15 17:25:29 by jcervoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 typedef struct s_arg
 {
-	char			*token;
+	int				token;
 	char			*content;
 	struct s_arg	*next;
 }	t_arg;
 
-typedef struct	s_mlc
+typedef struct s_mlc
 {
 	void			*ptr;
 	struct s_mlc	*next;
