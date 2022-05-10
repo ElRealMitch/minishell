@@ -6,7 +6,7 @@
 /*   By: jcervoni <jcervoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 09:18:40 by aweaver           #+#    #+#             */
-/*   Updated: 2022/04/15 17:21:48 by jcervoni         ###   ########.fr       */
+/*   Updated: 2022/05/10 15:30:53 by jcervoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	main(int ac, char *av[], char *envp[])
 			verif = ft_get_heredoc(verif);
 			verif = ft_get_outfile(verif);
 			verif = ft_get_appendout(verif);
+			if (verif->token == TOKEN_CMD && verif->next != NULL)
+				ft_join_cmd(verif);
 			printf("content = %s,  token = %d\n", verif->content, verif->token);
 			verif = verif->next;
 		}
